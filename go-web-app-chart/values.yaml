@@ -5,7 +5,7 @@ image:
   repository: shivaraj73/g1o-web-app
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "26762088008"
+  tag: "26762169881"
 
 ingress:
   enabled: false
