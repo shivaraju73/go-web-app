@@ -50,6 +50,10 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Check secrets
+        run: |
+          echo "Username set: ${{ secrets.DOCKERHUB_USERNAME != '' }}"
+          echo "Token set: ${{ secrets.DOCKERHUB_TOKEN != '' }}"
       - name: Build and Push action
         uses: docker/build-push-action@v7
         with:
